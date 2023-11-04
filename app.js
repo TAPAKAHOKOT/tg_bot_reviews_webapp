@@ -8,10 +8,7 @@ mainButton.textColor = '#FFFFFF';
 mainButton.color = '#2cab37';
 mainButton.setText("Отправить");
 
-tg.showAlert(`Добро пожаловать, @${tg.WebAppUser.username}.`);
-
-mainButton.onEvent("click", function(){
-	tg.showAlert(`Добро пожаловать, @${tg.WebAppUser.username}.`);
+tg.onEvent("mainButtonClicked", function(){
 	tg.sendData({
 		'stars': 5,
 		'comment': document.getElementById('comment').value
