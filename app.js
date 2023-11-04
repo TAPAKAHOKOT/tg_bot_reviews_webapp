@@ -1,16 +1,19 @@
-let tg = window.Telegram.WebApp;
+var webApp = window.Telegram.WebApp,
+	mainButton = webApp.MainButton,
+	backButton = webApp.BackButton;
 
-tg.expand();
+mainButton.show();
+backButton.show();
 
-tg.MainButton.textColor = '#FFFFFF';
-tg.MainButton.color = '#2cab37';
+webApp.MainButton.textColor = '#FFFFFF';
+webApp.MainButton.color = '#2cab37';
 
-tg.MainButton.show();
-tg.MainButton.setText("Отправить");
+webApp.MainButton.show();
+webApp.MainButton.setText("Отправить");
 
-Telegram.WebApp.onEvent("mainButtonClicked", function(){
-	tg.sendData({
+webApp.onEvent("mainButtonClicked", function(){
+	webApp.sendData({
 		'stars': 5,
-		'comment': document.getElementById('comment').text
+		'comment': document.getElementById('comment').value
 	});
 });
