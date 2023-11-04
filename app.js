@@ -9,8 +9,9 @@ mainButton.color = '#2cab37';
 mainButton.setText("Отправить");
 
 tg.onEvent("mainButtonClicked", function(){
-	tg.sendData({
+	tg.sendData('TEST')
+	tg.sendData(JSON.stringify({
 		'stars': 5,
 		'comment': document.getElementById('comment').value
-	});
+	}));
 });
