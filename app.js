@@ -47,6 +47,6 @@ tg.onEvent("mainButtonClicked", function(){
 	tg.sendData(JSON.stringify({
 		'stars': starsNum,
 		'comment': document.getElementById('comment').value,
-		'is_anano': document.getElementById('is_anon').checked,
+		'is_anon': document.getElementById('is_anon').checked,
 	}));
 });
