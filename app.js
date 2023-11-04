@@ -24,7 +24,11 @@ class Rating {
     });
   }
 }
-document.querySelectorAll('.rating').forEach(dom => new Rating(dom));
+
+document.addEventListener("DOMContentLoaded", () => {
+	document.querySelectorAll('.rating').forEach(dom => new Rating(dom));
+});
+
 
 
 
